@@ -8,7 +8,8 @@ import java.util.Scanner;
  * @see	https://programmers.co.kr/learn/courses/30/lessons/12969
  */
 public class P12969 {
-    public static void main(String[] args) {
+    @SuppressWarnings("resource")
+	public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int colSize = sc.nextInt();
         int rowSize = sc.nextInt();
