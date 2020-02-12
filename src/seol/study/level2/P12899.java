@@ -30,7 +30,19 @@ public class P12899 {
 		System.out.println();
 	}
 
+	public String[] arr = {"1", "2", "4"};
+	
 	public String solution(int n) {
+		String answer = "";
+		while(n!=0) {
+			answer = arr[(n-1)%3] + answer;
+			n = (n-1)/3;
+		}
+		return answer;
+	}
+	
+	
+	public String solution2(int n) {
 		String answer = "";
 		int value = 0;
 		while(n!=0) {
@@ -38,7 +50,7 @@ public class P12899 {
 			n = (n-1)/3;
 			answer = this.intTo124(value) + answer;
 		}
-		return answer.replaceAll("2", "4").replaceAll("1", "2").replaceAll("0", "1");
+		return answer;
 	}
 	
 	public String intTo124(int i) {
